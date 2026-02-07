@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "preject_name"
+version = "0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+
+# Dependencias (las pones aquí si quieres que se instalen automáticamente)
+dependencies = []
+
+[project.scripts]
+# Esto crea el comando "nexus" en la terminal
+command = "new_module.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["new_module*"]
